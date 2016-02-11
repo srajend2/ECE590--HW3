@@ -23,6 +23,7 @@ Turns the dynamixel left , then turn right for one
 #define DXL_BUS_SERIAL3 3  //Dynamixel on Serial3(USART3)  <-OpenCM 485EXP
 /* Dynamixel ID defines */
 #define J_ID 1
+#define J_ID2 2
  
 Dynamixel Dxl(DXL_BUS_SERIAL1); 
  
@@ -30,9 +31,8 @@ void setup() {
   // Initialize the dynamixel bus:
   // Dynamixel 2.0 Baudrate -> 0: 9600, 1: 57600, 2: 115200, 3: 1Mbps  
   Dxl.begin(3);  
-  Dx2.begin(3);
   Dxl.jointMode(J_ID); //jointMode() is to use position mode  
-  Dx2.jointMode(J_ID);
+  Dxl.jointMode(J_ID2);
 }
  
 void loop() {
@@ -44,11 +44,11 @@ void loop() {
   Dxl.goalPosition(J_ID, 90);
   // Wait for 1 second (1000 milliseconds)
   delay(2000); 
- Dxl.goalPosition(J_ID, 0); 
+// Dxl.goalPosition(J_ID, 0); 
   // Wait for 1 second (1000 milliseconds)
-  delay(1000);              
+ // delay(1000);              
   /*Turn dynamixel ID 1 to position 300*/
-  Dxl.goalPosition(J_ID, 180);
+ // Dxl.goalPosition(J_ID, 180);
   // Wait for 1 second (1000 milliseconds)
-  delay(1000);   
+//  delay(1000);   
 }
