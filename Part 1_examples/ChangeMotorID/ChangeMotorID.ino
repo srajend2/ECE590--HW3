@@ -38,6 +38,9 @@ void setup() {
 }
  
 void loop() {
-  // Wait for 1 second (1000 milliseconds)
+  Dxl.goalPosition(NEW_ID, 20); 
+  delay(2000);
+  Dxl.goalPosition(NEW_ID, 200); 
   delay(1000);              
+  
 }
