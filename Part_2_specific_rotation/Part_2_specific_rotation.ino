@@ -30,12 +30,12 @@ void loop() {
   /*Turn first motor to position 45*/
   Dxl.goalPosition(J_ID, (45/STEP_DEGREE)); 
 
-  /*Turn first motor to position 0*/
+  /*Turn second motor to position 0*/
   Dxl.goalPosition(J_ID2, 0); 
   delay(3000);              
   /*Turn second motor to position 180*/
   Dxl.goalPosition(J_ID2, (180/STEP_DEGREE));
   delay(3000);              
-  /*Turn first motor to position 0*/
+  /*Turn second motor to position 0*/
   Dxl.goalPosition(J_ID2, 0); 
 }
