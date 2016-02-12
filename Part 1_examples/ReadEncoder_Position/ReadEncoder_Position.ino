@@ -14,7 +14,7 @@ void setup() {
   // Initialize the dynamixel bus:
   // Dynamixel 2.0 Baudrate -> 0: 9600, 1: 57600, 2: 115200, 3: 1Mbps  
   Dxl.begin(3);
-Dxl.maxTorque(J_ID,1023); // it has maxtorque for weak movement  
+Dxl.maxTorque(J_ID,1023); // it has minimum torque so that the axle can be rotated easily
 //  Dxl.jointMode(J_ID); //jointMode() is to use position mode  
 }
  
